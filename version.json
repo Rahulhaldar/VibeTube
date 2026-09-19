@@ -1,8 +1,8 @@
 {
-  "versionName": "1.0.1-test",
-  "versionCode": 5,
-  "title": "VibeTube v1.0.1 Test",
+  "versionName": "1.0.2",
+  "versionCode": 6,
+  "title": "VibeTube v1.0.2",
   "message": "A fresher, faster and better video experience.",
-  "downloadUrl": "https://github.com/Rahulhaldar/VibeTube/releases/latest",
+  "downloadUrl": "https://github.com/Rahulhaldar/VibeTube/releases/download/v1.0.2/VibeTube-Release.apk",
   "mandatory": false
 }
