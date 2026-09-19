@@ -1,104 +1,312 @@
+<div align="center">
+
+<img src="fastlane/metadata/android/en-US/images/icon.png" alt="VibeTube Icon" width="120">
+
 # VibeTube
 
-**Watch. Vibe. Your Way.**
+### A modern, private, and feature-rich video client for Android
 
-VibeTube is a polished Android video experience focused on discovery, smooth playback, Shorts, search, downloads, and personal controls.
+**Watch · Listen · Download · Explore**
 
-> **Project status:** Active development · Website version 1.0.1
+<p>
+  <img src="https://img.shields.io/badge/Android-API%2024%2B-3DDC84?style=flat-square&logo=android&logoColor=white" alt="Android API 24+">
+  <img src="https://img.shields.io/badge/Kotlin-100%25-B125EA?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin">
+  <img src="https://img.shields.io/badge/Jetpack%20Compose-Material%203-4285F4?style=flat-square&logo=jetpackcompose&logoColor=white" alt="Jetpack Compose">
+  <img src="https://img.shields.io/badge/License-GPL--3.0-blue?style=flat-square" alt="GPL-3.0">
+</p>
 
-## ✨ Premium Features
+**VibeTube** is an independently developed Android video client based on the PlayTube open-source project, with significant UI, playback, Shorts, download, storage, and performance improvements.
 
-- 🏠 Clean Home and discovery experience
-- 🔎 Search across videos, Shorts, and channels
-- ▶️ Premium Media3 player
-- 🎚️ Dynamic video quality selection
-- 💬 Captions, playback speed, sleep timer, lock screen, and advanced player controls
-- 🔊 Background playback and Picture-in-Picture
-- 📱 Dedicated vertical Shorts feed
-- ♾️ Continuation pagination and rolling Shorts preload
-- 🛡️ Canonical-ID duplicate protection and session-based feed freshness
-- ⬇️ Flexible video and audio downloads
-- 📊 Download progress and completion notifications
-- 💾 Device-library support through modern Android storage APIs
-- ⚙️ Detailed playback, Shorts, download, appearance, search, notification, privacy, and storage settings
-- 🚀 Performance-focused architecture and asynchronous navigation
-- 🌗 Light and dark UI support
+</div>
 
-## 🎨 Design System
+---
 
-VibeTube uses a clean, minimal visual language designed around readability and focused video consumption.
+## ✨ Features
 
-| Token | Value | Usage |
+### 🎬 Video Experience
+
+- **Modern VibeTube UI** — Clean, premium light and dark themes.
+- **Video Playback** — AndroidX Media3 / ExoPlayer.
+- **Background Playback** — Continue listening outside the app.
+- **Picture-in-Picture** — Watch videos while using other apps.
+- **Fullscreen Player** — Dedicated fullscreen playback experience.
+- **Playback Controls** — Quality, speed, captions, seeking, and player settings.
+- **Watch History** — Resume previously watched content.
+- **Subscriptions & Saved Content** — Manage content locally.
+
+### 📱 Shorts
+
+- Dedicated vertical Shorts feed.
+- Continuous pagination and preloading.
+- Session-based duplicate protection.
+- Long-press 2× playback.
+- Watch Full support.
+- Background playback.
+- Download support.
+- Smooth swipe-based playback.
+
+### 🔎 Search & Discovery
+
+- Search videos, Shorts, and channels.
+- All / Shorts / Videos / Channels filters.
+- Related video and Shorts recommendations.
+- Cached thumbnails and metadata.
+- Independent feed state and pagination.
+
+### ⬇️ Downloads
+
+- Dynamic source-supported quality selection.
+- High-quality video downloads.
+- Device video downloads.
+- Device audio downloads as **real MP3 files**.
+- VibeTube internal video downloads.
+- Real audio conversion instead of extension renaming.
+- MP3 title, artist, duration, and album artwork.
+- Download progress, processing, success, and failure notifications.
+- File validation before completion.
+
+### 🎧 Audio
+
+- MediaSession system controls.
+- Background audio playback.
+- Audio-only playback.
+- Resume playback position.
+- Dynamic audio stream selection.
+- MP3 metadata and artwork.
+
+### 🎨 UI
+
+- Material 3.
+- Light / Dark themes.
+- Premium Watch Page.
+- Compact search results.
+- Modern Download Sheet.
+- Five-tab navigation:
+  **Home · Shorts · Subscriptions · Notifications · You**
+- Configurable animations and player behavior.
+
+### ⚙️ Settings
+
+Playback · Shorts · Downloads · Appearance · Search · Notifications · Privacy/Data · Player Controls · Storage · Advanced · About
+
+---
+
+## 📸 Screenshots
+
+<div align="center">
+
+<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/homescreen.png" width="18%" alt="VibeTube Home">
+&nbsp;
+<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/shorts.png" width="18%" alt="VibeTube Shorts">
+&nbsp;
+<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/watch.png" width="18%" alt="VibeTube Watch">
+&nbsp;
+<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/downloads.png" width="18%" alt="VibeTube Downloads">
+&nbsp;
+<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/you.png" width="18%" alt="VibeTube You">
+
+</div>
+
+> Update screenshot filenames above if your repository uses different paths.
+
+---
+
+## 🧩 Technology Stack
+
+| Category | Technology | Purpose |
 |---|---|---|
-| Primary | `#E50914` | Brand accent, primary actions |
-| Primary Light | `#FF3B45` | Highlights and hover states |
-| Ink | `#15171B` | Primary text / dark surfaces |
-| Muted | `#69707C` | Secondary text |
-| Background | `#FFFFFF` | Light surfaces |
-| Soft Background | `#F6F7F9` | Section backgrounds |
-| Border | `#E8EAEE` | Dividers and cards |
+| Language | Kotlin | Android development |
+| UI | Jetpack Compose | Declarative UI |
+| Design | Material 3 | Components and theming |
+| Architecture | MVVM / Clean Architecture | Application structure |
+| DI | Hilt | Dependency injection |
+| Reactive | Coroutines / StateFlow | Async and reactive state |
+| Database | Room | Local data |
+| Preferences | DataStore | Settings |
+| Playback | AndroidX Media3 / ExoPlayer | Video and audio |
+| Extraction | NewPipeExtractor | Stream and metadata extraction |
+| Images | Coil | Thumbnail/artwork loading |
+| Networking | OkHttp | Network requests |
+| Downloads | WorkManager / Download services | Background downloads |
+| Audio conversion | FFmpegKit / FFmpeg | Real MP3 encoding |
+| Build | Gradle / KSP / Version Catalog | Build system |
 
-**Website style:** white/light theme, crimson accent, rounded surfaces, subtle shadows, compact typography, responsive layouts, and inline SVG social icons.
+---
 
-## 🧱 Android Stack
+## 🏗️ Architecture
 
-The Android project is based on:
+```text
+Jetpack Compose UI
+        │
+        ▼
+ViewModel / StateFlow
+        │
+        ▼
+Domain / Use Cases
+        │
+        ▼
+Repositories
+   ┌────┴─────┐
+   ▼          ▼
+ Room      NewPipeExtractor
+DataStore     OkHttp
+   │          │
+   └────┬─────┘
+        ▼
+ Media / Download Layer
+        │
+ Media3 / WorkManager
+        │
+        ▼
+ Device / VibeTube Storage
+```
 
-- Kotlin
-- Jetpack Compose
-- Material 3
-- MVVM / Clean Architecture
-- Hilt
-- Kotlin Coroutines + Flow
-- Room
-- DataStore
+---
+
+## 📥 Download Storage
+
+```text
+VibeTube/
+└── download/
+    ├── VibeTube Video/
+    └── VibeTube Audio/
+```
+
+Device storage location may vary on modern Android versions because of Scoped Storage and MediaStore rules.
+
+### Device Audio
+
+Audio downloads are exported as valid MP3 files with metadata and, when available, embedded artwork.
+
+### VibeTube Storage
+
+VibeTube internal storage is intended for supported video downloads. Audio selection is not offered for VibeTube internal storage.
+
+---
+
+## 🔐 Privacy
+
+VibeTube follows a local-first approach.
+
+- No mandatory Google account for core usage.
+- Local preferences remain on the device.
+- Download state is stored locally.
+- No VibeTube-owned advertising system.
+- No VibeTube-owned analytics service is required for core functionality.
+
+Network requests may still be required to retrieve video, stream, thumbnail, and metadata content.
+
+---
+
+## 🧪 Testing
+
+Before publishing a release, test:
+
+- Fresh installation and update
+- Home and Search
+- Shorts
+- Watch Page
+- Fullscreen playback
+- Background playback
+- Picture-in-Picture
+- Video downloads
+- Audio / MP3 downloads
+- Download notifications
+- Gallery and music-player playback
+- Light and dark themes
+- Android 10+ storage behavior
+- App restart during downloads
+- Failed and cancelled downloads
+- Different Android versions and screen sizes
+
+---
+
+## 🙏 Acknowledgements
+
+VibeTube builds upon open-source work from the Android community.
+
+Special thanks to:
+
+- [PlayTube](https://github.com/arslandaim-hub/PlayTube)
+- [NewPipe](https://github.com/TeamNewPipe/NewPipe)
+- [NewPipeExtractor](https://github.com/TeamNewPipe/NewPipeExtractor)
+- LibreTube
+- PipePipe
+- Flow
+- AndroidX / Jetpack
 - Media3 / ExoPlayer
-- WorkManager
-- NewPipeExtractor
-- OkHttp / Ktor
 - Coil
+- FFmpeg / FFmpegKit
+- Kotlin and Android communities
 
-## 📦 Releases
+VibeTube contains significant modifications to the original PlayTube project, including branding, UI/UX, playback, Shorts, downloads, audio conversion, notifications, storage handling, and performance improvements.
 
-Download the latest Android APK from:
+---
 
-**GitHub Releases:** https://github.com/mrxfx/Vibetubez/releases
+## ⚖️ License & Open-Source Notice
 
-## 🌐 Website
+VibeTube is a modified/derivative project based on **PlayTube**, which is licensed under the **GNU General Public License v3.0 (GPL-3.0)**.
 
-Project website:
+Applicable GPL-covered code remains subject to GPL-3.0.
 
-https://github.com/mrxfx/Vibetubez
+When redistributing VibeTube or modified versions:
 
-The landing page is intentionally dependency-free static HTML/CSS and uses the project screenshots from `assets/`.
+- Preserve applicable copyright and license notices.
+- Keep GPL-covered code under GPL-3.0.
+- Provide corresponding source code as required by the license.
+- Clearly document significant modifications.
+- Include the complete GPL-3.0 license.
+
+See [`LICENSE`](LICENSE) for the complete license text.
+
+### Upstream Project
+
+**PlayTube:** https://github.com/arslandaim-hub/PlayTube
+
+---
 
 ## 👨‍💻 Developer
 
-**Rahul Haldar**
+<div align="center">
 
-- GitHub: https://github.com/mrxfx/Vibetubez
-- Instagram: https://www.instagram.com/mr.haldar__
+### Rahul Haldar
 
-## 📄 Open Source & Attribution
+**VibeTube Developer & Maintainer**
 
-VibeTube development includes work based on the upstream PlayTube project.
+</div>
 
-Upstream repository:
+---
 
-https://github.com/arslandaim-hub/PlayTube
+## ⚠️ Important Notice
 
-The upstream project is licensed under **GNU GPL-3.0**. When distributing modified or derivative code, preserve the applicable GPL-3.0 license terms, copyright notices, attribution, and source-code obligations.
+VibeTube is an independent open-source project.
 
-VibeTube-specific branding, website content, and modifications should not be represented as part of the upstream project.
+- VibeTube is not affiliated with, endorsed by, or sponsored by Google or YouTube.
+- YouTube and related trademarks belong to their respective owners.
+- Content availability and stream formats depend on the underlying source and may change.
+- Users are responsible for complying with applicable laws, copyright requirements, and service terms.
+- Review applicable platform policies before distributing the application through third-party app stores.
 
-## ⚠️ Disclaimer
+---
 
-VibeTube is an independent Android client project. It is not affiliated with or endorsed by any video platform, Google, YouTube, or other third-party service.
+## ⭐ Support the Project
 
-## 🤝 Contributing
+If VibeTube is useful to you:
 
-Issues, suggestions, and code contributions are welcome through the GitHub repository.
+- ⭐ Star the repository
+- 🐛 Report reproducible bugs
+- 💡 Suggest improvements
+- 🔧 Contribute code
+- 📖 Improve documentation
 
-## 📜 License
+---
 
-See the repository's GPL-3.0 license and upstream notices for the applicable licensing terms.
+<div align="center">
+
+**VibeTube**
+
+*Watch. Listen. Explore.*
+
+**Developed by Rahul Haldar**
+
+</div>
