@@ -1,7 +1,7 @@
 {
-  "versionName": "1.0.1",
-  "versionCode": 1,
-  "title": "VibeTube v1.0.1",
+  "versionName": "1.0.1-test",
+  "versionCode": 2,
+  "title": "VibeTube v1.0.1 Test",
   "message": "A fresher, faster and better video experience.",
   "downloadUrl": "https://github.com/Rahulhaldar/VibeTube/releases/latest",
   "mandatory": false
